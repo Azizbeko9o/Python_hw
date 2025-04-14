@@ -1,0 +1,246 @@
+# txt = 'abcabcdeabcdefabcdefg'
+# done = 'aeioucd'
+# # done = {'a', 'e', 'i', 'o', 'u'}
+# counter = 0
+# ans = ''
+# for i in range(len(txt)):
+#     counter += 1
+#     ans += txt[i]
+#     if i!=len(txt)-1 and counter >= 3 and txt[i] not in done:
+#         done += txt[i]
+#         ans += '_'
+#         counter = 0
+# print(ans)
+##########################################
+            #COMPREHENSIONS
+            #List comprehensions
+            #Dictionary comprehension
+            #Set coprehension
+            #Generator Expression
+##########################################
+# num = [2, 3, 5, 6]
+# a = []
+# for number in num:
+#     a.append(number ** 2)
+# print(a)
+# num = [2, 3, 5, 6]
+# a = [val**3 for val in num]
+# print(a)
+# num = [2, 3, 5, 6]
+# a = []
+# for number in num:
+#     if number % 2 == 0:
+#         a.append(number ** 2)
+# print(a)
+# num = [1, 2, 3, 4, 5, 6]
+# a = [(val, val**2) for val in num if val % 2 == 0]
+# print(a)
+# num = [1, 2, 3, 4, 5, 6]
+# a = [print(val) for val in num if val % 2 == 0]
+# print(a)
+# a = 1 
+# a ** 2 
+# a - 3
+# print(a)
+# a = 10
+# b = 1 if a % 2 == 0 else 2
+# if a % 2:
+#     b = 1
+# else:
+#     b = 2
+# print(b)
+# num = [1, 2, 3, 4, 5, 6]
+# a = ['None' if print(val) else 0 for val in num if val % 2 == 0]
+# print(a)
+# num = [1, 2, 3, 4, 5, 6]
+# a = ['None' if not print(val) else 0 for val in num if val % 2 == 0]
+# print(a)
+# num = [1, 2, 3, 4, 5, 6]
+# a = ['None bo\'ldi' if not print(val) else 0 for val in num if val % 2 == 0]
+# print(a)
+# a = []
+# for i in range(3):
+#    for j in range(3):
+#       print('i=',i, 'j=',j)
+#       print(('------'))
+#       a.append((i, j))
+#       print(a)
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# print(matrix[1])
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# a = [i for row  in matrix for i in row]
+# print(a)
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# flattened = []
+# for row in matrix:
+#     for item in row:
+#         flattened.append(item)
+# print(flattened)
+##########################################
+         #Dictionary comprehensions
+##########################################
+# keys = ['a', 'b', 'c', 'd', 'e']
+# valeus = [1, 2, 3, 4, 5]
+# d = {k:v for (k, v) in zip(keys, valeus)}
+# print(d)
+# keys = ['a', 'b', 'c', 'd', 'e', 'f']
+# valeus = [1, 2, 3, 4, 5]
+# for row in zip(keys, valeus):
+#     print(row)
+# matrix = [
+#     [1, 2, 3]
+#     [4, 5, 6]
+#     [7, 8, 9]
+# ]
+# matrix_squares = {pos: {num:num**2 for num in row} for pos, row in enumerate(matrix)}
+# print(matrix_squares)
+# number = [1, 2, 3, 4, 5]
+# squares = {num:f"{num} ning kvardrat {num**2}" for num in number}
+# print(squares)
+# number = [1, 2, 3, 4, 5]
+# squares = {num:[num, num**2] for num in number}
+# print(squares)
+# a = ['apple', 'cherry', 'banana', 'mango', 'kivi', 'lemon']
+# for i in enumerate(a):
+#     print(i)
+# a = ['apple', 'cherry', 'banana', 'mango', 'kivi', 'lemon']
+# for i in enumerate(a, start=1):
+#     print(i)
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+# matrix_squares = {pos: {num:num**2 for num in row} for pos, row in enumerate(matrix)}
+# print(matrix_squares)
+#########################################
+# letter = """Python is an interpreted, object-oriented,
+# high-level programming language with dynamic semantics.
+# Its high-level built in data structures, combined with
+# dynamic typing and dynamic binding, make it very attractive
+# for Rapid Application Development, as well as for use as
+# a scripting or glue language to connect existing components
+# together. Python's simple, easy to learn syntax emphasizes
+# readability and therefore reduces the cost of program
+# maintenance. Python supports modules and packages, which
+# encourages program modularity and code reuse."""
+
+# cleaned = letter.lower().replace('•', '')\
+#    .replace(',', '').replace('\n', '')\
+#    .split()
+# print(cleaned)
+#########################################
+# letter = """Python is an interpreted, object-oriented,
+# high-level programming language with dynamic semantics.
+# Its high-level built in data structures, combined with
+# dynamic typing and dynamic binding, make it very attractive
+# for Rapid Application Development, as well as for use as
+# a scripting or glue language to connect existing components
+# together. Python's simple, easy to learn syntax emphasizes
+# readability and therefore reduces the cost of program
+# maintenance. Python supports modules and packages, which
+# encourages program modularity and code reuse."""
+
+# cleaned = letter.lower().replace('•', '')\
+#    .replace(',', '').replace('\n', '')\
+#    .split()
+# unique_words = []
+# for word in cleaned:
+#     if len(word) < 3 and word not in unique_words:
+#         unique_words.append(word)
+# print(unique_words)
+#########################################
+# letter = """Python is an interpreted, object-oriented,
+# high-level programming language with dynamic semantics.
+# Its high-level built in data structures, combined with
+# dynamic typing and dynamic binding, make it very attractive
+# for Rapid Application Development, as well as for use as
+# a scripting or glue language to connect existing components
+# together. Python's simple, easy to learn syntax emphasizes
+# readability and therefore reduces the cost of program
+# maintenance. Python supports modules and packages, which
+# encourages program modularity and code reuse."""
+
+# cleaned = letter.lower().replace('•', '')\
+#    .replace(',', '').replace('\n', '')\
+#    .split()
+# unique_words = {word for word in cleaned if len(word) < 3}
+# print(unique_words)
+#########################################
+# letter = """Python is an interpreted, object-oriented,
+# high-level programming language with dynamic semantics.
+# Its high-level built in data structures, combined with
+# dynamic typing and dynamic binding, make it very attractive
+# for Rapid Application Development, as well as for use as
+# a scripting or glue language to connect existing components
+# together. Python's simple, easy to learn syntax emphasizes
+# readability and therefore reduces the cost of program
+# maintenance. Python supports modules and packages, which
+# encourages program modularity and code reuse."""
+
+# cleaned = letter.lower().replace('•', '')\
+#    .replace(',', '').replace('\n', '')\
+#    .split()
+# unique_words = []
+# for word in cleaned:
+#     if len(word) < 3 and word not in unique_words:
+#         unique_words.append(word)
+# unique_words = {word for word in cleaned if len(word) < 3}
+# print(unique_words)
+#########################################
+# a = [num**2 for num in range(10)]
+# for i in a:
+#     print(i)
+# generator = [num**2 for num in range(10)]
+# print(generator)
+# for num in generator:
+#   print(num)
+# a = (num**2 for num in range(10))
+# for i in a:
+#     print(i)
+# a = (num**2 for num in range(10))
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# print(next(a))    
+# a = (num**2 for num in range(10))
+# for i in a:
+#     print(i)
+# for i in a:
+#     print(i)
+# def introduce(n):
+#     print("Hello", n)
+# introduce(n='John')
+# print(introduce)
+# def introduce(n):
+#     print("Hello", n)
+# introduce('John')
+# print(introduce)
+# def add(a, b):
+#     return a + b
+# result = add(3, 5)
+# print(result)
+# def add(a, b):
+#      print(a + b)
+# result = add(3, 5)
+# print(result)
+# def add(a, b):
+#      print(a + b)
+#      return a + b
+# result = add(3, 5)
+# print(result)
+# def add(a, b):
+#     global c
+#     c += 4
+#     print(c)
+#     print(c)
+#     return a + b
+# c = 5
+# print(add(3, 4))
+# print(c)
